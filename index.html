@@ -5,8 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Recipes</title>
+    <style>
+        *{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+#navbar {
+    display: flex;
+    background-color:#F7F7F7;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid #eaeaea;
+}
+#navbar img {
+    width: 90px;
+    margin: 5px;
+    margin-left: 15px;
+}
+#navbar > div:nth-child(1) {
+  flex-grow: 5;
+}
+#navbar > div:nth-child(n+2):nth-child(-n+5) { 
+    flex-grow:1;
+    text-align: center;
+    padding-top: 22px;
+    font-weight: 400;
+}
+/* #navbar > div:nth-child(n+2):nth-child(-n+5):hover { 
+    background-color: #df0d0d;
+    cursor: pointer;
+} */
+    </style>
 </head>
 <body>
-    
+    <div id="navbar">
+        <div><img src="https://img.favpng.com/18/10/10/fruit-logo-food-recipe-business-png-favpng-HUvujmv3a23dftJfpeGxyFeaq.jpg"></div>
+        <div onclick="indexPage()">Home</div>
+        <div onclick="recipeofthedayPage()">Recipe of The Day</div>
+        <div onclick="latestPage()">Latest Recipe</div>   
+        <div>About</div>  
+    </div>
 </body>
 </html>
