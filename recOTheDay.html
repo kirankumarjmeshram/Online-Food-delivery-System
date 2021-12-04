@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/recipeoftheday.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="searchedRecipe">
+
+    </div>
+</body>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js";
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML = navbar();
+  </script>
+  <script src="./scripts/navbOnclk.js"></script>
+  <script src="./scripts/recipeoftheday.js"></script>

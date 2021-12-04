@@ -1,30 +1,54 @@
-/* navar */
 
-*{
-    margin: 0px;
-    font-family: 'Montserrat', sans-serif;
+
+/* index page */
+#input_text {
+    width: 250px;
+    height: 25px;
+    padding-left: 5px;
+    margin-top: 20px;
 }
-#navbar {
-    display: flex;
-    background-color:#F7F7F7;
-    box-sizing: border-box;
-    border-bottom: 1.5px solid #eaeaea;
+#display_items {
+    display: grid;
+    grid-template-rows: 70px auto ;
 }
-#navbar img {
-    width: 90px;
-    margin: 5px;
-    margin-left: 15px;
-}
-#navbar > div:nth-child(1) {
-  flex-grow: 5;
-}
-#navbar > div:nth-child(n+2):nth-child(-n+5) { 
-    flex-grow:1;
+#display_items > div:nth-child(1) {
     text-align: center;
-    padding-top: 22px;
-    font-weight: 400;
 }
-/* #navbar > div:nth-child(n+2):nth-child(-n+5):hover { 
-    background-color: #df0d0d;
-    cursor: pointer;
-} */
+#display_items > div:nth-child(2) {
+    padding: 20px;
+    padding-left:40px;
+}
+#recipe_search_list {
+    z-index: 1;
+    position: relative;
+    width: 260px;
+    border: 1px solid #eaeaea;  
+    margin:auto;
+    background-color:white;
+    visibility: hidden;
+    height:200px;
+    overflow-y: scroll;
+    
+}
+#recipe_search_list::-webkit-scrollbar {
+    display: none;
+}
+#recipe_search_list > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#recipe_search_list > div:hover {
+    background-color:#eaeaea;
+}
+#searchedRecipe > img {
+    width:30%;
+    border-radius:10px;
+}
+#searchedRecipe > h2 {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#searchedRecipe > p {
+    margin-top:20px;
+    margin-bottom:20px;
+}

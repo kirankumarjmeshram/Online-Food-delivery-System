@@ -1,51 +1,11 @@
-let timeout;
-let visible = document.getElementById("container");
-async function getRecipe(search_item) {
-    let res = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${search_item}`
-    );
-    let data = await res.json();
-    console.log("data:", data.meals);
-    appendResultToDiv(data.meals)
-  } 
-
-  function debounce(func,delay){
-      let input_value =document.getElementById("input_text").value ;
-
-      if(timeout){
-          clearTimeout(timeout)
-      }if(input_value==""){
-          visible.style.visibility ="hidden";
-      }else{
-          timeout=setTimeout(()=>{
-              func(input_value)
-          }delay);
-      }
-  }
-
-  function appendResultToDiv(data){
-       
-    let list = document.getElementById("recipe_search_list")
-    let input_value = document.getElementById("input_text").value;
-    list.innerHTML =null;
-    visible.style.visibility="visible";
-    data.forEach((el)=> {
-
-        let div=document.createElement("div");
-        div.onclick=function() {
-            appendRecipe(el)
-            input_value.innerText="";
-            visible.style.visibility="hidden";
-            console.log(el)
-
-        }
-        let title=el.strMeal;
-        div.append(title);
-        list.append(div);
-
-    })
+let visible=document.getElementById("recipe_search_list");
+async function getRecipe() {
+  let res = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`);
+  let data = await res.json();
+  console.log("data:", data.meals);
+  appendRecipe(data.meals[0])
 }
-
+getRecipe()
 
 function appendRecipe(el) {
     let parent=document.getElementById("searchedRecipe")
@@ -181,4 +141,3 @@ function appendRecipe(el) {
 
 
 }
- 

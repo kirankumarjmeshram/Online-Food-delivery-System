@@ -1,0 +1,30 @@
+#container {
+    padding: 20px;
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    gap: 20px;
+  }
+  #container > div {
+    background-color: #eaeaea;
+    border-radius: 20px;
+  }
+  #container > div:hover {
+    box-shadow:0 0 6px #979797;
+    transition: all 0.5s;
+  }
+  #container > div > img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+  #container > div > h4 {
+    margin-top:5px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #container > div > p {
+    margin-top:5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom:10px;
+  }

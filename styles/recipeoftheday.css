@@ -1,0 +1,17 @@
+
+#searchedRecipe {
+    padding-left: 40px;
+    padding-top: 20px;
+}
+#searchedRecipe > img {
+    width:30%;
+    border-radius:10px;
+}
+#searchedRecipe > h2 {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#searchedRecipe > p {
+    margin-top:20px;
+    margin-bottom:20px;
+}

@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+#navbar {
+    display: flex;
+    background-color:#F7F7F7;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid #eaeaea;
+}
+#navbar img {
+    width: 120px;
+    margin: 5px;
+    margin-left: 15px;
+}
+#navbar > div:nth-child(1) {
+  flex-grow: 5;
+}
+#navbar > div:nth-child(n+2):nth-child(-n+5) { 
+    flex-grow:1;
+    text-align: center;
+    padding-top: 22px;
+    font-weight: 400;
+}
+#navbar > div:nth-child(n+2):nth-child(-n+5):hover { 
+    background-color: #eaeaea;
+    cursor: pointer;
+}
