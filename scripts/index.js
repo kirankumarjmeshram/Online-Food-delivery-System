@@ -19,7 +19,7 @@ async function getRecipe(search_item) {
       }else{
           timeout=setTimeout(()=>{
               func(input_value)
-          }delay);
+          },delay);
       }
   }
 
