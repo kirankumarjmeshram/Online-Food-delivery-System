@@ -10,17 +10,7 @@
 <body>
     <div id="navbar"></div>
 
-    <div id="display_items">
-        <div>
-          <input type="text"id="input_text" oninput="debounce(getRecipe,1000)" placeholder="Search Recipes"/>
-          <div id="recipe_search_list"></div>
-        </div>
-
-        <div id="searchedRecipe">
-
-        </div>
-    </div>
-
+   <div id="container"></div>
 
 </body>
 </html>
@@ -30,3 +20,4 @@ import navbar from './components/navbar.js';
 let navbar_div = document.getElementById('navbar');
 navbar_div.innerHTML=navbar()
 </script>
+<script src=""></script>
